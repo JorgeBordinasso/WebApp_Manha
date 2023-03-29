@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - WebApp_Manha</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="meuCss" asp-append-version="true" />
+   @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="meuCss" asp-append-version="true" />*@
     <link rel="stylesheet" href="~/WebApp_Manha.styles.css" asp-append-version="true" />
 </head>
 <body>
@@ -18,6 +18,7 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
@@ -33,6 +34,10 @@
                         <li>
                             <a class="nav-link text-dark" href="/Home/Login"> Login do sistema</a>
                         </li>
+                        <li>
+                            <a class="nav-link text-dark" href="/Clientes/Lista"> Lista de Cleintes</a>
+                        </li>
+
                           <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Cadastros

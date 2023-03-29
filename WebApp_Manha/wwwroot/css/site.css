@@ -14,8 +14,11 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+   /* background: rgb(161,157,229);
+    background: linear-gradient(90deg, rgba(161,157,229,1) 0%, rgba(157,157,201,1) 39%);*/
 }
+
 
 /* CSS reset */
 *, *:before, *:after {
