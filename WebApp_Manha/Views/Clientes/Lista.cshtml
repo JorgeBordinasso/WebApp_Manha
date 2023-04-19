@@ -1,9 +1,9 @@
-﻿@model WebApp_Manha.Models.ClienteViewModel
+﻿@model List<WebApp_Manha.Models.ClienteViewModel>
 
 
 <div class="card">
     <div class="card-header">
-        <h2>Lista de Clientes  @Model.Nome</h2>
+        <h2>Lista de Clientes  @Model.Nome - @Model.Id / @Model.Telefone </h2>
         <div class="card-body">
 
 
@@ -51,41 +51,20 @@
 
                 </thead>
                 <tdoby>
-
-
-                
-                <tr>
-                    <th>1</th>
-                    <th>Fernando</th>
-                    <th>(16) 99134 0447</th>
-                    <td>
-                        <a href="/Clientes/Editar/1" class="btn btn-warning">Editar</a>
-                        <a href="/Clientes/Compras/1" class="btn btn-primary">Todas as compras</a>
-                        <a href="/Clientes/Excluir/1" class="btn btn-danger">Excluir</a>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th>2</th>
-                    <th>Joao</th>
-                    <th>(16) 99134 1215</th>
-                    <td>
-                        <a href="/Clientes/Editar/2" class="btn btn-warning">Editar</a>
-                        <a href="/Clientes/Compras/2" class="btn btn-primary">Todas as compras</a>
-                        <a href="/Clientes/Excluir/2" class="btn btn-danger">Excluir</a>
-                    </td>
-                </tr>
-
-                <tr>
-                    <th>3</th>
-                    <th>Maria</th>
-                    <th>(16) 99134 2556</th>
-                    <td>
-                        <a href="/Clientes/Editar/3" class="btn btn-warning">Editar</a>
-                        <a href="/Clientes/Compras/3" class="btn btn-primary">Todas as compras</a>
-                        <a href="/Clientes/Excluir/3" class="btn btn-danger">Excluir</a>
-                    </td>
-                </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Nome</td>
+                            <td>@item.Telefone</td>
+                            <td>
+                                <a href="/Clientes/Editar/@item.Id" class="btn btn-warning">Editar</a>
+                                <a href="/Clientes/Compras/@item.Id" class="btn btn-primary">Todas as compras</a>
+                                <a href="/Clientes/Excluir/@item.Id" class="btn btn-danger">Excluir</a>
+                            </td>
+                        </tr>
+                    }
+             
 
                 </tdoby>
             </table>

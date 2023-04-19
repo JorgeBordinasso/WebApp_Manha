@@ -11,7 +11,24 @@ namespace WebApp_Manha.Controllers
             novo.Nome = "Jorge Henrique";
             novo.Id = 10;
             novo.Telefone = "16997777947";
-            return View(novo);
+
+            ClienteViewModel novo2 = new ClienteViewModel();
+            novo.Nome = "Pedro";
+            novo.Id = 11;
+            novo.Telefone = "16997777947";
+
+            ClienteViewModel novo3 = new ClienteViewModel();
+            novo.Nome = "Fernando";
+            novo.Id = 12;
+            novo.Telefone = "16997777947";
+
+
+            List<ClienteViewModel> lista = new List<ClienteViewModel>();
+            lista.Add(novo);
+            lista.Add(novo2);
+            lista.Add(novo3);
+
+            return View(lista);
         }
 
         public IActionResult Cadastro()
