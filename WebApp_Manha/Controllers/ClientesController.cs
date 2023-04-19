@@ -1,12 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApp_Manha.Models;
 
 namespace WebApp_Manha.Controllers
 {
     public class ClientesController : Controller
     {
         public IActionResult Lista()
-        {
-            return View();
+        {   
+            ClienteViewModel novo = new ClienteViewModel();
+            novo.Nome = "Jorge Henrique";
+            novo.Id = 10;
+            novo.Telefone = "16997777947";
+            return View(novo);
         }
 
         public IActionResult Cadastro()
