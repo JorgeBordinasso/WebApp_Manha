@@ -35,7 +35,21 @@ namespace WebApp_Manha.Controllers
         [HttpPost]
         public IActionResult SalvarDados(ClienteViewModel model)
         {
-            lista.Add(model);
+            if(model.Id > 0)
+            {
+                int indice = lista.FindIndex(a => a.Id == model.Id); 
+                lista[indice] = model;
+
+            }
+            else
+            {
+                Random random = new Random();
+                model.Id = random.Next(1,9999);
+                lista.Add(model);
+            }
+
+
+
             return RedirectToAction("Lista");
         }
 
@@ -45,6 +59,7 @@ namespace WebApp_Manha.Controllers
 
         public IActionResult Cadastro()
         {
+            
             return View();
         }
 
@@ -65,10 +80,30 @@ namespace WebApp_Manha.Controllers
         }
         public IActionResult Editar(int id)
         {
-            return View();
+            ClienteViewModel cliente = lista.Find(a => a.Id == id);
+           
+            if (cliente != null)
+            {
+                return View(cliente);
+            }
+            else
+            {
+                return RedirectToAction("Lista");
+            }
         }
 
         public IActionResult Excluir(int id)
+        {
+            ClienteViewModel cliente = lista.Find(a => a.Id == id);
+            if(cliente != null)
+            {
+                lista.Remove(cliente);
+
+            }
+            return RedirectToAction("Lista");
+        }
+
+        public IActionResult Compras(int id)
         {
             return View();
         }
