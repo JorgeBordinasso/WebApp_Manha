@@ -21,34 +21,21 @@
 
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="BemVindo">Bem Vindo</a>
-                        </li>
+                      
 
-                        <li>
-                            <a class="nav-link text-dark" href="/Home/Login"> Login do sistema</a>
-                        </li>
-                        <li>
-                            <a class="nav-link text-dark" href="/Permissao/Lista"> Lista de Permissao</a>
-                        </li>
+                      
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Cadastros
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Cliente</a></li>
-                                <li><a class="dropdown-item" href="#">Produtos</a></li>
-                                <li><a class="dropdown-item" href="/Permissao/Cadastro">Cadastrar Permissao</a></li>
+                                <li><a class="dropdown-item" href="/categorias/lista">Categorias</a></li>
+                                <li><a class="dropdown-item" href="/produtos/lista">Produtos</a></li>
+                              
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="/Usuarios/Cadastro">Usuários</a></li>
-                                <li><a class="dropdown-item" href="/Usuarios/Index">Lista de Usuários</a></li>
+                                <li><a class="dropdown-item" href="/categorias/Cadastro">cadastro categoria</a></li>
+                                <li><a class="dropdown-item" href="/produtos/cadastro">cadastro de produtos</a></li>
                             </ul>
                         </li>
                     </ul>

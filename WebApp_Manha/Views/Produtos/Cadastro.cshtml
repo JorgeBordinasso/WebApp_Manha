@@ -7,25 +7,25 @@
                 Cadastro de Produto
             </div>
             <div class="card-body">
-                <form action="/Produtos?SalvarDados" method="post">
+                <form action="/Produtos/SalvarDados" method="post">
                     <label>Descrição do Produto</label>
-                    <input type ="text" class="form-cntrol" name="Descicao"/>
+                    <input type ="text" class="form-control" name="Descricao"/>
                     <br />
                     <label>Valor</label>
                     <input type="text" name="Valor" class="form-control"/>
                     <br />
                     <label>Ativo</label>
-                    <select name="Ativo" class="form=control">
+                    <select name="Ativo" class="form-select">
                         <option valeu="true">Ativo</option>
                         <option valeu="false">Negativo</option>
                     </select>
                     <br />
                     <label>Lista de Categorias</label>
-                    <select name="CategoriaId" class="form=control">
+                    <select name="CategoriaId" class="form-select">
                         <option valeu="0">Selecione uma Categoria</option>
                         @foreach(var categoria in Model.ListaCategorias)
                         {
-                            <option valeu="@categoria.Id">@categoria.Nome</option>
+                            <option value="@categoria.Id">@categoria.Nome</option>
                         }
 
                     </select>

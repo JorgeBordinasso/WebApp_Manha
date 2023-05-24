@@ -36,7 +36,7 @@ namespace WebApp_Manha.Controllers
         {
             db.Categorias.Add(dados);
             db.SaveChanges();
-            return View("Lista");
+            return RedirectToAction("Lista");
         }
     }
 }
