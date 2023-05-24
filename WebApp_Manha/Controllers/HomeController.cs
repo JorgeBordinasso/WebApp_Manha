@@ -17,7 +17,7 @@ namespace WebApp_Manha.Controllers
         // Action Result devolve uma tela (html)
         public IActionResult Index()
         {
-            return View(db.PRODUTOS.ToList() );
+            return View(db.Produtos.ToList() );
         }
 
         // mais uma tela no sistema

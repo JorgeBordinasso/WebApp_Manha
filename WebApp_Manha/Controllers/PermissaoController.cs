@@ -17,7 +17,7 @@ namespace WebApp_Manha.Controllers
             return View(contexto.PERMISSAO.ToList());
         }
 
-        public IActionResult Cadastro()
+        public IActionResult CadaSstro()
         {
             return View();
         }

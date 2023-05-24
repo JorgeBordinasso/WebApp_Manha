@@ -8,7 +8,7 @@ namespace WebApp_Manha
         public Contexto( DbContextOptions<Contexto> opt ) :base( opt ) 
         {}
 
-        public DbSet<Produtos> PRODUTOS{ get; set; }
+        public DbSet<Produtos> Produtos{ get; set; }
 
         public DbSet<Categorias> Categorias { get; set; }
 
